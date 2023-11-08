@@ -1,0 +1,16 @@
+.banner{
+    height: 400px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0226/2491/files/BlackFiveDaySaleCollection_2020_88efc6de-45d9-4c91-a7aa-8b0b2c564d2e.gif?v=1606361986);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/* .card{
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.356);
+} */
+.col{
+    width: 300px;
+}
+.card-img-top:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}

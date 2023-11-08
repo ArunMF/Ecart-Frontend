@@ -1,0 +1,35 @@
+<!-- wishlist with product -->
+<section class="py-3">
+    <div class="container-fluid px-4 px-lg-5 mt-3">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="col mb-5" *ngFor="let wishlist of allWishlist">
+                <div class="card h-100 shadow">
+                    <!-- Product image-->
+                    <img class="card-img-top p-3" [src]="wishlist.image" alt="..." height="200px" />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">{{wishlist.title}}</h5>
+                            <!-- Product price-->
+                            ${{wishlist.price}}
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="row text-center">
+                            <a class="btn btn-outline-dark mt-auto me-2" routerLink="">Add to Cart</a>
+                            <a class="btn btn-outline-dark mt-auto" (click)="deleteWishlistProduct(wishlist.id)">Remove</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- wishlist with empty -->
+<div class="container text-center my-5" *ngIf="allWishlist.length==0">
+    <h1>Your Wishlist was empty....!</h1>
+    <button class="btn btn-outline-dark mt-3" routerLink="/products">Shop more</button>
+</div>

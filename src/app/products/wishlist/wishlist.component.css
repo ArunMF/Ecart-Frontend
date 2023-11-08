@@ -1,0 +1,10 @@
+.col{
+    width: 300px;
+}
+.card-img-top:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+.card-footer .btn{
+    width: 109px;
+}

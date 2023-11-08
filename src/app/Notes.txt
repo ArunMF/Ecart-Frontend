@@ -1,0 +1,29 @@
+
+                EKART-FRONTEND
+
+        1. Create a ekart folder 
+        2. Inside it create a project - ng new ekart-frontend 
+        3. Install third party libraries - 
+            MDBoostrap - npm i mdb-angular-ui-kit
+            Font awesome
+            Google fonts
+        4. Lazy loading
+            Lazy loading is a technology of angular that allows you to load JavaScript components when a specific route is activated. It improves application load time speed by splitting the application into many bundles. When the user navigates by the app, bundles are loaded as needed.
+
+            Lazy loading helps to keep the bundle size small, which helps reduce load times. We must use the class decorator to create an Angular module @NgModule, and the decorator uses a metadata object that defines the module.
+
+        5. Create a new module in angular. --here we create product module for implementing lazy loading.
+            - ng g m products --route products --module app.module
+        6. Create component in lazy loading module(product module)
+            - ng g c products/allProducts
+            - ng g c products/viewProducts
+            - ng g c products/wishlist
+            - ng g c products/cart
+        7. components that not included in lazy loading module
+            - ng g c header
+            - ng g c footer
+            - ng g c pageNotFound
+
+        8. Setup path
+        localhost 4200 - all products => localhost:4200/allProducts
+            
